@@ -1,7 +1,8 @@
 {
-  "name": "tailwind-nextjs-starter-blog",
+  "name": "tailwindcss-templates",
   "version": "1.5.6",
   "private": true,
+  "author": "Cai Toy",
   "scripts": {
     "start": "cross-env SOCKET=true node ./scripts/next-remote-watch.js ./data",
     "dev": "next dev",

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1155" height="133" viewBox="0 0 1155 133">
+  <defs>
+    <clipPath id="clip-Logo-Horizontal">
+      <rect width="1155" height="133"/>
+    </clipPath>
+  </defs>
+  <g id="Logo-Horizontal" clip-path="url(#clip-Logo-Horizontal)">
+    <g id="logo-horizontal-2" data-name="logo-horizontal" transform="translate(17 5)">
+      <text id="TailwindCss_Templates" data-name="TailwindCss    Templates" transform="translate(97 93)" fill="#ebf4ff" font-size="89" font-family="Poppins-ExtraLight, Poppins" font-weight="200" opacity="0.89"><tspan x="0" y="0" xml:space="preserve">tailwindcss    </tspan><tspan y="0" fill="#38bdf8">templates</tspan></text>
+      <g id="tailwind-logo" transform="translate(0 35.361)">
+        <g id="waves">
+          <path id="Path_1" data-name="Path 1" d="M44.5,0Q26.7,0,22.25,17.759q6.676-8.88,15.575-6.661c3.385.844,5.806,3.294,8.483,6.008,4.363,4.418,9.414,9.531,20.443,9.531q17.8,0,22.25-17.759-6.673,8.88-15.574,6.659c-3.387-.844-5.807-3.294-8.484-6.006C60.579,5.11,55.53,0,44.5,0M22.25,26.638Q4.451,26.638,0,44.4q6.676-8.88,15.574-6.66c3.387.844,5.807,3.294,8.485,6.008,4.363,4.418,9.412,9.531,20.443,9.531q17.8,0,22.25-17.759-6.676,8.88-15.575,6.661c-3.385-.845-5.806-3.3-8.483-6.008-4.363-4.418-9.414-9.533-20.443-9.533" transform="translate(0 0.001)" fill="#38bdf8" fill-rule="evenodd"/>
+        </g>
+      </g>
+      <text id="_" data-name="&lt;/&gt;" transform="translate(575 83)" fill="#38bdf8" font-size="55" font-family="SourceCodePro-Medium, Source Code Pro" font-weight="500" opacity="0.547"><tspan x="0" y="0">&lt;/&gt;</tspan></text>
+    </g>
+  </g>
+</svg>

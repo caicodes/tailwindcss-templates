@@ -75,3 +75,7 @@ Some Design System Code with 💎 Crystal by AC
   color: pink;
 }
 ```
+
+```html
+<div class="bg-radial-at-r from-sky-400 to-indigo-900" />
+```

@@ -1,8 +1,8 @@
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
-  author: 'Tails Azimuth',
-  headerTitle: 'TailwindBlog',
-  description: 'A blog created with Next.js and Tailwind.css',
+  title: 'Tailwind CSS Templates Blog',
+  author: 'Cai Toy',
+  headerTitle: 'Styled Templates',
+  description: 'Tailwind Templates for HTML, Vue, React, Next.js and more with Tailwind CSS',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwindcss-templates.vercel.app',
@@ -10,8 +10,8 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
-  email: 'address@yoursite.com',
-  github: 'https://github.com',
+  email: 'cau@artasce.com',
+  github: 'https://github.com/caicodes',
   twitter: 'https://twitter.com/Twitter',
   facebook: 'https://facebook.com',
   youtube: 'https://youtube.com',
