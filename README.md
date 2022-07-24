@@ -12,25 +12,12 @@ Check out the documentation below to get started.
 
 ## Quick Start Guide
 
-1. Try installing the starter using the new [Pliny project CLI](https://github.com/timlrx/pliny):
+1. Clone the repository
 
 ```bash
-npm i -g @pliny/cli
-pliny new --template=starter-blog my-blog
-```
 
-It supports the updated version of the blog with Contentlayer, optional choice of TS/JS and different package managers as well as more modularized components which will be the basis of the template going forward.
+git clone https://github.com/caicodes/tailwindcss-templates.git your-tailwind-doc-site
 
-Alternatively to stick with the current version, TypeScript and Contentlayer:
-
-```bash
-npx degit 'caicodes/tailwindcss-templates#contentlayer'
-```
-
-or JS (official support)
-
-```bash
-npx degit https://github.com/caicodes/tailwindcss-templates.git
 ```
 
 2. Personalize `siteMetadata.js` (site related information)
@@ -130,7 +117,7 @@ summary: 'Looking for a performant, out of the box template, with all the best i
 images: ['/static/images/canada/mountains.jpg', '/static/images/canada/toronto.jpg']
 authors: ['default', 'sparrowhawk']
 layout: PostLayout
-canonicalUrl: https://tailwind-nextjs-starter-blog.vercel.app/blog/introducing-tailwind-nextjs-starter-blog
+canonicalUrl: https://tailwindcss-templates.vercel.app/blog/introducing-tailwind-nextjs-starter-blog
 ---
 ```
 
@@ -152,8 +139,8 @@ The API routes used in the newsletter component cannot be used in a static site 
 
 ## Support
 
-Using the template? Support this effort by giving a star on GitHub, sharing your own blog and giving a shoutout on Twitter or becoming a project [sponsor](https://github.com/sponsors/timlrx).
+Using the template? Support this effort by giving a star on GitHub, sharing your own blog and giving a shoutout on Twitter or becoming a project [sponsor](https://github.com/sponsors/caicodes).
 
 ## Licence
 
-[MIT](https://github.com/caicodes/tailwindcss-templates/blob/master/LICENSE) © [Timothy Lin](https://www.timrlx.com)
+[MIT](https://github.com/caicodes/tailwindcss-templates/blob/master/LICENSE) © [Artasce Creative](https://artasce.com)
