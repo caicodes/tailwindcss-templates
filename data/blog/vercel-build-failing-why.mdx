@@ -1,0 +1,72 @@
+---
+title: Vercel Build Failing, why?
+date: '2022-07-27'
+tags: ['vercel']
+draft: false
+summary: Tracking errors, discovering problems before pushing to main...
+images: []
+layout: PostLayout
+canonicalUrl:
+authors: ['default']
+---
+
+# Vercel Build Failing
+
+Push to main, wait for it... failed... again.
+
+```
+[02:06:29.346] Cloning github.com/caicodes/tailwindcss-templates (Branch: main, Commit: 445af2b)
+[02:06:30.014] Cloning completed: 668.076ms
+[02:06:30.375] Installing build runtime...
+[02:06:32.131] Build runtime installed: 1.755s
+[02:06:32.646] Looking up build cache...
+[02:06:35.782] Build cache downloaded [67.95 MB]: 2786.822ms
+[02:06:35.995] Installing dependencies...
+[02:06:36.337] yarn install v1.22.17
+[02:06:36.408] [1/4] Resolving packages...
+[02:06:36.807] [2/4] Fetching packages...
+[02:06:52.706] [3/4] Linking dependencies...
+[02:06:52.707] warning " > @mdx-js/loader@2.1.2" has unmet peer dependency "webpack@>=4".
+[02:06:52.708] warning " > @next/mdx@12.2.3" has unmet peer dependency "@mdx-js/react@*".
+[02:06:52.709] warning " > react-lottie@1.2.3" has incorrect peer dependency "react@^0.14.7 || ^15.0.0 || ^16.0.0".
+[02:06:52.716] warning "eslint-config-next > @typescript-eslint/parser > @typescript-eslint/typescript-estree > tsutils@3.21.0" has unmet peer dependency "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta".
+[02:06:52.717] warning " > file-loader@6.2.0" has unmet peer dependency "webpack@^4.0.0 || ^5.0.0".
+[02:07:06.398] [4/4] Building fresh packages...
+[02:07:07.417] $ husky install
+[02:07:07.483] husky - Git hooks installed
+[02:07:07.486] Done in 31.15s.
+[02:07:07.514] Detected Next.js version: 12.1.4
+[02:07:07.515] Running "yarn run build"
+[02:07:07.783] yarn run v1.22.17
+[02:07:07.810] $ next build && node ./scripts/generate-sitemap
+[02:07:08.503] info  - Checking validity of types...
+[02:07:12.950] info  - Creating an optimized production build...
+[02:07:15.321]
+[02:07:15.322] [1m[33mwarn[39m[22m - You have enabled experimental features: [33moptimizeUniversalDefaults[39m
+[02:07:15.322] [1m[33mwarn[39m[22m - Experimental features in Tailwind CSS are not covered by semver, may introduce breaking changes, and can change at any time.
+[02:07:35.429] info  - Compiled successfully
+[02:07:35.430] info  - Collecting page data...
+[02:07:38.567] error - Conflicting paths returned from getStaticPaths, paths must be unique per page.
+[02:07:38.568] See more info here: https://nextjs.org/docs/messages/conflicting-ssg-paths
+[02:07:38.568]
+[02:07:38.568] path: "/tags" from page: "/tags/[tag]" conflicts with path: "/tags"
+[02:07:38.568]
+[02:07:38.618] error Command failed with exit code 1.
+[02:07:38.618] info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+[02:07:38.628] Error: Command "yarn run build" exited with 1
+
+```
+
+# The problems
+
+The error had to do with the formatting of tags... I had a few tags with spaces and even one with a slash! Ooops, no sanitizing I guess, or something with the slash would make sense after watching the build from the command line and file path into the dist/production directory, `public/`
+
+```bash
+[02:07:38.567] error - Conflicting paths returned from getStaticPaths, paths must be unique per page.
+[02:07:38.568] See more info here: https://nextjs.org/docs/messages/conflicting-ssg-paths
+[02:07:38.568]
+[02:07:38.568] path: "/tags" from page: "/tags/[tag]" conflicts with path: "/tags"
+[02:07:38.568]
+[02:07:38.618] error Command failed with exit code 1.
+
+```
