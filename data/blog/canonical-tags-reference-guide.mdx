@@ -1,0 +1,142 @@
+---
+title: Canonical Tags Reference Guide
+date: '2022-07-27'
+tags: ['seo', 'canonicalization']
+draft: false
+summary: Understanding how to properly use canonicalization and set canonical URLs is essential knowledge for any SEO, and incorrect implementation of these can cause widespread issues that negatively impact your site's performance.
+images: []
+layout: PostLayout
+canonicalUrl:
+authors: ['default']
+---
+
+# What Are Canonical Tags and Canonical URLs?
+
+Often referred to as rel="canonical," canonical tags are a way of telling the search engines that a specified URL is the master copy of a page. They allow you to specify the canonical URL for a page. A canonical link allows webmasters to prevent duplicate content issues by specifying the "canonical" or "preferred" version of a web page.
+
+But wait, what is the difference between canonical tags and canonical URLs? And are there other ways to specify these?
+
+# Canonical Tags
+
+Found in the <head></head> section of a web page's HTML source code, a canonical tag looks like this:
+
+<link rel="canonical" href="https://www.website.com/page/" />
+These can either be self-referencing (where a canonical tag point to a page's own URL) or can reference
+another page's URL to consolidate signals.
+
+Often, we see the terminology of canonical tags and URLs used interchangeably, whereas this shouldn't be the case.
+
+This is for the simple reason that using the rel="canonical" tag is the most commonly used method to set canonical URLs — however, it is by no means the only one.
+
+# Canonical URLs
+
+So then, what is a canonical link? A canonical link is a URL that is chosen as the 'master' URL for a set of duplicate pages.
+
+> In Google's own words:
+> A canonical URL is the URL of the page that Google thinks is most representative from a set of duplicate pages on your site.
+> — Google Search Console Help
+
+You can indicate your preferred canonical URL. However, Google may choose a different page than you do for various reasons.
+
+That said, in most instances, when set correctly, it will be your specified URL that is chosen as the canonical.
+
+Put simply, canonical URLs dictate which page will usually (except in the case where a duplicate is explicitly better suited for a user, let's say a mobile-specific version) be shown in the search results.
+
+The canonical URL of a page can be on a different domain.
+
+# How Else Can Canonical URLs Be Specified?
+
+Canonical tags aren't the only way that you can specify a canonical URL, despite being the most likely that you will use.
+
+You can also set canonicals:
+
+- By setting a rel=canonical HTTP header response.
+- In your sitemap (however, while all pages listed in a sitemap are suggested as canonicals; Google will decide which pages (if any) pages are duplicates).
+- By using 301 redirects.
+
+That said, while these are all ways that are recommended by Google, they are not all suitable to use in every situation, as we will explore below, and each has its own recommended reasons for use.
+
+Just so that you are aware, setting canonical URLs isn't a requirement, and in instances that you do not specify one, Google will use other signals to identify the page that they think is the best version.
+
+However, it is recommended that you use canonicalization effectively, to ensure that you are able to control how your site appears on the search engines and to prevent issues that arise as a result of duplicate content.
+
+# Reasons Why Duplicate Content Exists
+
+Before we look at the reasons why you should use canonical URLs and how to specify these across the most popular CMS', you need to understand why duplicate content exists in the first place. No one sets out to create duplicate content within a site.
+
+Usually, this happens when content management systems create multiple URLs when you launch a page, when you have different versions of your site that are indexable, have an alternate version for different device types, or use dynamic URLs.
+
+Take a look at the following URLs and assume that, to a user, they all display exactly the same content:
+
+https://www.website.com/category/product-a/
+https://www.website.com/product-a/
+https://website.com/product-a/
+http://www.website.com/product-a/
+http://website.com/product-a/
+https://m.website.com/product-a/
+https://www.website.com/product-a
+https://www.website.com/product-A/
+
+To a search engine, this isn't one page of content, it is eight duplicate pages:
+
+URLs #1 and #2 come about as a result of the CMS saving product URLs both with and without the category name.
+URL #3, #4 and #5 are a result of the site being accessible both on HTTP and HTTPS versions, as well as www and non-www versions.
+URL #6 is the mobile-friendly version that sits on a subdomain.
+URL #7 is the non-trailing slash version of URL #2.
+URL #8 uses a capital 'A' in place of a lowercase used elsewhere across the site.
+
+You might also find duplicate content exists across URLs such as:
+
+https://www.website.com/
+https://www.website.com/index.php
+
+Now see how it's easy for duplicate content to happen?
+
+In fact, many sites have these issues without you even realizing it, but canonical URLs help search engines to identify different variations of a page as a single URL.
+
+# Why You Should Use Canonical URLs for SEO
+
+Canonical URLs exist to help you deal with duplicate content issues that could affect the performance of your site.
+
+But, more specifically, there is a number of reasons why you should be using canonical URLs as just one technical SEO focus area:
+
+## Specify the URL that Should Be Shown in Search Results
+
+When you set a canonical URL, you are giving an indication as to which version of a page should be displayed on the SERPs.
+
+Think about it this way, which would you be more likely to click on?
+
+https://www.domain.com/page-1/
+https://www.domain.com/index.php?id=2
+Most likely, the first one.
+
+## Use canonicals to specify the URL that you want the search engines to rank.
+
+Consolidate Link Signals Across Duplicate or Near-Identical Pages
+When you have duplicate or near-identical pages on your site, there is a chance that the individual URLs could earn links from external sources.
+
+Use canonical URLs to consolidate the link signals from multiple pages into a single URL that you specify.
+
+This, in itself, can help your site to rank given that signals otherwise distributed across multiple URLs are consolidated into one stronger page.
+
+# Managing Syndicated Content
+
+It is not uncommon for content to be syndicated across different websites to place it in front of new audiences.
+
+To prevent duplicate pages from ranking on the SERPs and to ensure that the original piece of content is the one that ranks, you can use canonical URLs to consolidate ranking signals.
+
+## Prevent Googlebot Crawling Duplicate Pages
+
+Especially so if you are working with a large website with lots of pages, you can use canonical URLs to ensure that Googlebot spends time crawling your new pages rather than duplicated versions of the same one across mobile and desktop versions, as an example.
+
+That said, crawl budgets aren't an issue for most sites unless you've got hundreds of thousands, or more, pages.
+
+## How to Correctly Implement the rel=canonical Tag
+
+By far, the most common way to specify canonical URLs is by using the rel="canonical" tag in your page's header.
+
+Adding tags and HTML code might sound daunting if you re not a developer, but the majority of CMS platforms allow you to specify canonicals out-of-the-box.
+
+Here is a simple footnote[^1]. With some additional text after it.
+
+[^1]: My reference. https://www.semrush.com/blog/canonical-url-guide/
