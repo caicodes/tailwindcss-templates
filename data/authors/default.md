@@ -4,8 +4,8 @@ avatar: /static/images/avatar.png
 occupation: Mulitmedia Design, Development, and Production
 company: Artasce Creative
 email: cai@artasce.com
-twitter: https://twitter.com/Twitter
-linkedin: https://www.linkedin.com
+twitter: https://twitter.com/artascecreative
+# linkedin: https://www.linkedin.com
 github: https://github.com/caicodes/
 ---
 

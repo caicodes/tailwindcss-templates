@@ -28,14 +28,19 @@ module.exports = {
         sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: colors.amber,
-        primarydark: colors.teal,
+        primary: colors.pink,
+        accent: colors.cyan,
         gray: colors.neutral,
+        // code snippet view settings //
+        customCodeBgColor: '#ffffff91',
+        customCodeTextColor: '#312e81d4',
+        customCodeBgColorDark: '#201e58',
+        customCodeTextColorDark: '#ffffffb3',
       },
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.700'),
+            color: theme('colors.indigo.700'),
             a: {
               color: theme('colors.primary.500'),
               '&:hover': {
@@ -46,26 +51,27 @@ module.exports = {
             h1: {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.900'),
+              color: theme('colors.indigo.900'),
             },
             h2: {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.900'),
+              color: theme('colors.indigo.900'),
             },
             h3: {
               fontWeight: '600',
-              color: theme('colors.gray.900'),
+              color: theme('colors.indigo.900'),
             },
             'h4,h5,h6': {
-              color: theme('colors.gray.900'),
+              color: theme('colors.indigo.900'),
             },
             pre: {
-              backgroundColor: theme('colors.gray.800'),
+              backgroundColor: theme('colors.customCodeBgColor'),
+              color: theme('colors.customCodeTextColor'),
             },
             code: {
               color: theme('colors.pink.500'),
-              backgroundColor: theme('colors.gray.100'),
+              backgroundColor: 'transparent',
               paddingLeft: '4px',
               paddingRight: '4px',
               paddingTop: '2px',
@@ -79,7 +85,7 @@ module.exports = {
               content: 'none',
             },
             details: {
-              backgroundColor: theme('colors.gray.100'),
+              backgroundColor: theme('colors.indigo.100'),
               paddingLeft: '4px',
               paddingRight: '4px',
               paddingTop: '2px',
@@ -94,45 +100,50 @@ module.exports = {
             'ul li::marker': {
               backgroundColor: theme('colors.indigo.500'),
             },
-            strong: { color: theme('colors.gray.600') },
+            strong: { color: theme('colors.indigo.600') },
             blockquote: {
-              color: theme('colors.gray.900'),
-              borderLeftColor: theme('colors.gray.200'),
+              color: theme('colors.indigo.900'),
+              borderLeftColor: theme('colors.indigo.200'),
             },
           },
         },
+
         dark: {
+          primary: colors.emerald,
+
           css: {
             color: theme('colors.indigo.300'),
             a: {
-              color: theme('colors.amber.500'),
+              color: theme('colors.accent.500'),
               '&:hover': {
-                color: `${theme('colors.amber.400')} !important`,
+                color: `${theme('colors.accent.400')} !important`,
               },
-              code: { color: theme('colors.amber.400') },
+              code: { color: theme('colors.accent.400') },
             },
             h1: {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.100'),
+              color: theme('colors.indigo.100'),
             },
             h2: {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.100'),
+              color: theme('colors.indigo.100'),
             },
             h3: {
               fontWeight: '600',
-              color: theme('colors.gray.100'),
+              color: theme('colors.indigo.100'),
             },
             'h4,h5,h6': {
-              color: theme('colors.gray.100'),
+              color: theme('colors.indigo.100'),
             },
             pre: {
-              backgroundColor: theme('colors.black'),
+              backgroundColor: theme('colors.customCodeBgColorDark'),
+              color: theme('colors.customCodeTextColorDark'),
             },
             code: {
-              backgroundColor: theme('colors.black'),
+              backgroundColor: theme('colors.customCodeBgColorDark'),
+              color: theme('colors.customCodeTextColorDark'),
             },
             details: {
               backgroundColor: theme('colors.indigo.800'),
@@ -140,25 +151,25 @@ module.exports = {
             hr: { borderColor: theme('colors.indigo.700') },
             'ol li::marker': {
               fontWeight: '600',
-              color: theme('colors.gray.400'),
+              color: theme('colors.indigo.400'),
             },
             'ul li::marker': {
-              backgroundColor: theme('colors.gray.400'),
+              backgroundColor: theme('colors.indigo.400'),
             },
-            strong: { color: theme('colors.gray.100') },
+            strong: { color: theme('colors.indigo.100') },
             thead: {
               th: {
-                color: theme('colors.gray.100'),
+                color: theme('colors.indigo.100'),
               },
             },
             tbody: {
               tr: {
-                borderBottomColor: theme('colors.gray.700'),
+                borderBottomColor: theme('colors.indigo.700'),
               },
             },
             blockquote: {
-              color: theme('colors.gray.100'),
-              borderLeftColor: theme('colors.gray.700'),
+              color: theme('colors.indigo.100'),
+              borderLeftColor: theme('colors.indigo.700'),
             },
           },
         },

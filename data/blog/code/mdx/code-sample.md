@@ -12,7 +12,7 @@ A sample post with markdown.
 
 Sample of inline highlighting `sum = parseInt(num1) + parseInt(num2)`
 
-## Code Blocks
+## Code Blocks Examples
 
 Some Javascript code
 
@@ -54,7 +54,7 @@ Some 🪄 CSS 🎨 With Tailwind CSS
 }
 
 .footnotes {
-  @apply mt-12 border-t border-gray-200 pt-8 dark:border-gray-700;
+  @apply mt-12 border-t border-indigo-200 pt-8 dark:border-indigo-700;
 }
 
 .csl-entry {

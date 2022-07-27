@@ -1,31 +1,44 @@
 import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
 import { PageSEO } from '@/components/SEO'
+import Lottie from 'react-lottie'
+// import animationData from '../data/animations/monkey-banana.json'
+import animationData from '../data/animations/meditating-monkey.json'
 
 export default function AuthorLayout({ children, frontMatter }) {
   const { name, avatar, occupation, company, email, twitter, linkedin, github } = frontMatter
 
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  }
+
   return (
     <>
       <PageSEO title={`About - ${name}`} description={`About me - ${name}`} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-indigo-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+      <div className="divide-y divide-indigo-200 dark:divide-indigo-700">
+        <div className="ml-8 space-y-2 pt-6 pb-8 md:space-y-5">
+          <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-indigo-900 dark:text-indigo-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             About
           </h1>
         </div>
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
-          <div className="flex flex-col items-center pt-8">
-            <Image
+          <div className="flex flex-col items-center pt-8 pl-8">
+            <Lottie options={defaultOptions} height={300} width={300} />
+            {/* <Image
               src={avatar}
               alt="avatar"
               width="192px"
               height="192px"
               className="h-48 w-48 rounded-full"
-            />
+            /> */}
             <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">{name}</h3>
-            <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
-            <div className="text-gray-500 dark:text-gray-400">{company}</div>
+            <div className="text-indigo-500 dark:text-indigo-400">{occupation}</div>
+            <div className="text-indigo-500 dark:text-indigo-400">{company}</div>
             <div className="flex space-x-3 pt-6">
               <SocialIcon kind="mail" href={`mailto:${email}`} />
               <SocialIcon kind="github" href={github} />
