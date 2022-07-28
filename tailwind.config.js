@@ -15,6 +15,16 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      // colors for tw-use-classes bg-scheme-400, ring-danger- text-accent etc...
+
+      colors: {
+        scheme: colors.indigo,
+        primary: colors.blue,
+        danger: colors.rose,
+        accent: colors.amber,
+        gray: colors.neutral,
+      },
+
       spacing: {
         '9/16': '56.25%',
       },
@@ -27,16 +37,11 @@ module.exports = {
       fontFamily: {
         sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
       },
-      colors: {
-        colorScheme: colors.indigo,
-        primary: colors.cyan,
-        accent: colors.cyan,
-        gray: colors.neutral,
-      },
+
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.colorScheme.800'),
+            color: theme('colors.scheme.800'),
             a: {
               color: theme('colors.primary.500'),
               '&:hover': {
@@ -46,26 +51,25 @@ module.exports = {
             h1: {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.colorScheme.900'),
+              color: theme('colors.scheme.900'),
             },
             h2: {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.colorScheme.900'),
+              color: theme('colors.scheme.900'),
             },
             h3: {
               fontWeight: '600',
-              color: theme('colors.colorScheme.900'),
+              color: theme('colors.scheme.900'),
             },
             'h4,h5,h6': {
-              color: theme('colors.colorScheme.900'),
+              color: theme('colors.scheme.900'),
             },
             pre: {
-              backgroundColor: theme('colors.colorScheme.600'),
-              color: theme('colors.colorScheme.200'),
+              backgroundColor: theme('colors.scheme.900'),
+              color: theme('colors.accent.400'),
             },
             code: {
-              color: theme('colors.pink.500'),
               paddingLeft: '4px',
               paddingRight: '4px',
               paddingTop: '2px',
@@ -79,32 +83,32 @@ module.exports = {
               content: 'none',
             },
             details: {
-              backgroundColor: theme('colors.colorScheme.100'),
+              backgroundColor: theme('colors.scheme.100'),
               paddingLeft: '4px',
               paddingRight: '4px',
               paddingTop: '2px',
               paddingBottom: '2px',
               borderRadius: '0.25rem',
             },
-            hr: { borderColor: theme('colors.colorScheme.200') },
+            hr: { borderColor: theme('colors.scheme.200') },
             'ol li::marker': {
               fontWeight: '600',
-              color: theme('colors.colorScheme.500'),
+              color: theme('colors.scheme.500'),
             },
             'ul li::marker': {
-              backgroundColor: theme('colors.colorScheme.500'),
+              backgroundColor: theme('colors.scheme.500'),
             },
-            strong: { color: theme('colors.colorScheme.600') },
+            strong: { color: theme('colors.scheme.600') },
             blockquote: {
-              color: theme('colors.colorScheme.900'),
-              borderLeftColor: theme('colors.colorScheme.200'),
+              color: theme('colors.scheme.900'),
+              borderLeftColor: theme('colors.scheme.200'),
             },
           },
         },
 
         dark: {
           css: {
-            color: theme('colors.colorScheme.300'),
+            color: theme('colors.scheme.300'),
             a: {
               color: theme('colors.primary.500'),
               '&:hover': {
@@ -114,50 +118,56 @@ module.exports = {
             h1: {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.colorScheme.100'),
+              color: theme('colors.scheme.100'),
             },
             h2: {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.colorScheme.100'),
+              color: theme('colors.scheme.100'),
             },
             h3: {
               fontWeight: '600',
-              color: theme('colors.colorScheme.100'),
+              color: theme('colors.scheme.100'),
             },
             'h4,h5,h6': {
-              color: theme('colors.colorScheme.100'),
+              color: theme('colors.scheme.100'),
             },
             pre: {
               backgroundColor: 'rgba(0,0,0,.25)',
               color: theme('colors.accent.400'),
             },
+            'code::before': {
+              content: 'none',
+            },
+            'code::after': {
+              content: 'none',
+            },
 
             details: {
-              backgroundColor: theme('colors.colorScheme.800'),
+              backgroundColor: theme('colors.scheme.800'),
             },
-            hr: { borderColor: theme('colors.colorScheme.700') },
+            hr: { borderColor: theme('colors.scheme.700') },
             'ol li::marker': {
               fontWeight: '600',
-              color: theme('colors.colorScheme.400'),
+              color: theme('colors.scheme.400'),
             },
             'ul li::marker': {
-              backgroundColor: theme('colors.colorScheme.400'),
+              backgroundColor: theme('colors.scheme.400'),
             },
-            strong: { color: theme('colors.colorScheme.100') },
+            strong: { color: theme('colors.scheme.100') },
             thead: {
               th: {
-                color: theme('colors.colorScheme.100'),
+                color: theme('colors.scheme.100'),
               },
             },
             tbody: {
               tr: {
-                borderBottomColor: theme('colors.colorScheme.700'),
+                borderBottomColor: theme('colors.scheme.700'),
               },
             },
             blockquote: {
-              color: theme('colors.colorScheme.100'),
-              borderLeftColor: theme('colors.colorScheme.700'),
+              color: theme('colors.scheme.100'),
+              borderLeftColor: theme('colors.scheme.700'),
             },
           },
         },

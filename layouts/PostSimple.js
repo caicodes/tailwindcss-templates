@@ -15,11 +15,11 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       <article>
         <div>
           <header>
-            <div className="space-y-1 border-b border-colorScheme-200 pb-10 text-center dark:border-colorScheme-700">
+            <div className="space-y-1 border-b border-primary-300 pb-10 text-center dark:border-primary-600">
               <dl>
                 <div>
                   <dt className="sr-only">Published on</dt>
-                  <dd className="text-base font-medium leading-6 text-colorScheme-500 dark:text-colorScheme-400">
+                  <dd className="text-base font-medium leading-6 text-scheme-500 dark:text-scheme-400">
                     <time dateTime={date}>{formatDate(date)}</time>
                   </dd>
                 </div>
@@ -30,10 +30,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             </div>
           </header>
           <div
-            className="divide-y divide-colorScheme-200 pb-8 dark:divide-colorScheme-700 xl:divide-y-0 "
+            className="divide-y divide-primary-300 pb-8 dark:divide-primary-600 xl:divide-y-0 "
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
-            <div className="divide-y divide-colorScheme-200 dark:divide-colorScheme-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
+            <div className="divide-y divide-primary-200 dark:divide-primary-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
               <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">{children}</div>
             </div>
 

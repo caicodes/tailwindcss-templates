@@ -29,7 +29,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
 
   return (
     <>
-      <div className="divide-y divide-colorScheme-200 dark:divide-colorScheme-700">
+      <div className="divide-y divide-primary-300 dark:divide-primary-600">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <div className="relative">
             <h1 className="text-3xl font-extrabold leading-9 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
@@ -46,10 +46,10 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
               type="text"
               onChange={(e) => setSearchValue(e.target.value)}
               placeholder="Search articles"
-              className="block w-full rounded-md border border-colorScheme-50 bg-colorScheme-50 px-4 py-2 text-colorScheme-900 placeholder-colorScheme-400 focus:border-accent-500 focus:ring-accent-500 dark:border-colorScheme-900 dark:bg-colorScheme-700 dark:text-colorScheme-100"
+              className="block w-full rounded-md border border-scheme-100 bg-scheme-100 px-4 py-2 text-scheme-900 placeholder-scheme-400 focus:border-scheme-400 focus:ring-accent-400 dark:border-scheme-700  dark:bg-scheme-700 dark:text-scheme-100 dark:focus:ring-accent-300"
             />
             <svg
-              className="absolute right-3 top-3 h-5 w-5 text-colorScheme-400 dark:text-colorScheme-300"
+              className="absolute right-3 top-3 h-5 w-5 text-scheme-400 dark:text-scheme-300"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -73,7 +73,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                   <dl>
                     <dt className="sr-only">Published on</dt>
-                    <dd className="ml-12 text-base font-medium leading-6 text-colorScheme-400 ">
+                    <dd className="ml-12 text-base font-medium leading-6 text-scheme-400 ">
                       <time dateTime={date}>{formatDate(date)}</time>
                     </dd>
                   </dl>
@@ -90,7 +90,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                         ))}
                       </div>
                     </div>
-                    <div className="prose max-w-none text-colorScheme-600 dark:text-colorScheme-200">
+                    <div className="prose max-w-none text-scheme-600 dark:text-scheme-200">
                       {summary}
                     </div>
                   </div>

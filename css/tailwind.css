@@ -11,11 +11,42 @@
 }
 
 .footnotes {
-  @apply mt-12 border-t border-colorScheme-200 pt-8 dark:border-colorScheme-700;
+  @apply mt-12 border-t border-scheme-200 pt-8 dark:border-scheme-700;
 }
 
 .csl-entry {
   @apply my-5;
+}
+
+.btn {
+  @apply rounded-md py-2 px-4 font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-opacity-75  dark:bg-opacity-20 dark:hover:bg-opacity-20;
+}
+
+.alert {
+  @apply my-4 rounded-md bg-gray-300 p-8 text-white shadow-md;
+}
+.alert.primary {
+  @apply bg-primary-200 text-primary-700;
+}
+.alert.default {
+  @apply bg-scheme-500 text-scheme-200;
+}
+.alert.danger {
+  @apply bg-danger-300 text-danger-700;
+}
+
+.btn.primary {
+  @apply bg-primary-800 text-white hover:bg-primary-700 focus:ring-primary-400;
+}
+.btn.default {
+  @apply bg-scheme-800 text-white hover:bg-scheme-700 focus:ring-scheme-300;
+}
+.btn.danger {
+  @apply bg-danger-800 text-white hover:bg-danger-700 focus:ring-danger-400;
+}
+
+.btn.accent {
+  @apply bg-accent-800 text-white hover:bg-accent-700 focus:ring-accent-800;
 }
 
 /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
@@ -25,15 +56,54 @@ input:-webkit-autofill:focus {
 }
 
 :root {
-  --color-icons-fill: theme(colors.primary.500);
+  --color-icons-fill: theme(colors.accent.500);
   --color-links: theme(colors.primary.600);
   --color-links-hover: theme(colors.primary.500);
-  --color-main: theme(colors.colorScheme.900);
+  --color-main-text: theme(colors.scheme.900);
+  --color-main-bg: theme(colors.scheme.200);
+  --color-main: theme(colors.scheme.100);
+  --color-main-light: white;
+  --color-primary: theme(colors.primary.500);
+  --color-primary-light: theme(colors.primary.400);
+  --color-accent: theme(colors.accent.600);
 }
 
 :root.dark {
-  --color-icons-fill: theme(colors.primary.400);
+  --color-icons-fill: theme(colors.accent.400);
   --color-links: theme(colors.primary.50);
   --color-links-hover: theme(colors.primary.300);
-  --color-main: theme(colors.colorScheme.900);
+  --color-main-text: theme(colors.scheme.100);
+  --color-main-bg: theme(colors.scheme.800);
+  --color-main: theme(colors.scheme.900);
+  --color-main-light: theme(colors.scheme.600);
+  --color-primary: theme(colors.primary.300);
+  --color-primary-light: theme(colors.primary.200);
+  --color-accent: theme(colors.accent.600);
+}
+
+:root {
+  color: var(--color-main-text);
+  background: var(--color-main-bg);
+  background: linear-gradient(
+    90deg,
+    var(--color-main) 0%,
+    var(--color-main-light) 35%,
+    var(--color-main) 100%
+  );
+}
+
+h1 {
+  color: var(--color-main-text);
+}
+a {
+  color: var(--color-primary);
+}
+.dark a {
+  color: var(--color-primary);
+}
+a:hover {
+  color: var(--color-primary-light);
+}
+.dark a:hover {
+  color: var(--color-primary-light);
 }

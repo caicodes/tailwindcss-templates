@@ -14,13 +14,13 @@ export default function Footer() {
           <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size="6" />
           <SocialIcon kind="twitter" href={siteMetadata.twitter} size="6" />
         </div>
-        <div className="mb-2 flex space-x-2 text-sm text-colorScheme-500 dark:text-colorScheme-400">
+        <div className="mb-2 flex space-x-2 text-sm text-scheme-500 dark:text-scheme-400">
           <div>{siteMetadata.author}</div>
           <div>{` 🥋  `}</div>
           <div>{`© ${new Date().getFullYear()}`}</div>
           <div>{` Made with 🧁 🍰 💎 💅 🍩 🍑 🧩 🎨 and a lot of  ❤️  from Lehi, Utah`}</div>
         </div>
-        <div className="mb-8 text-sm text-colorScheme-500 dark:text-colorScheme-400">
+        <div className="mb-8 text-sm text-scheme-500 dark:text-scheme-400">
           <Link href="/">{siteMetadata.title} </Link>
           <span>{` |  `}</span>
           <Link href="https://github.com/caicodes/tailwindcss-templates">
