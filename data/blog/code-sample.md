@@ -54,7 +54,7 @@ Some 🪄 CSS 🎨 With Tailwind CSS
 }
 
 .footnotes {
-  @apply mt-12 border-t border-indigo-200 pt-8 dark:border-indigo-700;
+  @apply mt-12 border-t border-colorScheme-200 pt-8 dark:border-colorScheme-700;
 }
 
 .csl-entry {
@@ -77,5 +77,5 @@ Some Design System Code with 💎 Crystal by AC
 ```
 
 ```html
-<div class="bg-radial-at-r from-sky-400 to-indigo-900" />
+<div class="bg-radial-at-r from-sky-400 to-colorScheme-900" />
 ```

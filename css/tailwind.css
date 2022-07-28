@@ -11,7 +11,7 @@
 }
 
 .footnotes {
-  @apply mt-12 border-t border-indigo-200 pt-8 dark:border-indigo-700;
+  @apply mt-12 border-t border-colorScheme-200 pt-8 dark:border-colorScheme-700;
 }
 
 .csl-entry {
@@ -22,4 +22,18 @@
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+:root {
+  --color-icons-fill: theme(colors.primary.500);
+  --color-links: theme(colors.primary.600);
+  --color-links-hover: theme(colors.primary.500);
+  --color-main: theme(colors.colorScheme.900);
+}
+
+:root.dark {
+  --color-icons-fill: theme(colors.primary.400);
+  --color-links: theme(colors.primary.50);
+  --color-links-hover: theme(colors.primary.300);
+  --color-main: theme(colors.colorScheme.900);
 }

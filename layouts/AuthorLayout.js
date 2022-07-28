@@ -20,9 +20,9 @@ export default function AuthorLayout({ children, frontMatter }) {
   return (
     <>
       <PageSEO title={`About - ${name}`} description={`About me - ${name}`} />
-      <div className="divide-y divide-indigo-200 dark:divide-indigo-700">
+      <div className="divide-y divide-colorScheme-200 dark:divide-colorScheme-700">
         <div className="ml-8 space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-indigo-900 dark:text-indigo-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-colorScheme-900 dark:text-colorScheme-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             About
           </h1>
         </div>
@@ -37,9 +37,9 @@ export default function AuthorLayout({ children, frontMatter }) {
               className="h-48 w-48 rounded-full"
             /> */}
             <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">{name}</h3>
-            <div className="text-indigo-500 dark:text-indigo-400">{occupation}</div>
-            <div className="text-indigo-500 dark:text-indigo-400">{company}</div>
-            <div className="flex space-x-3 pt-6">
+            <div className="text-colorScheme-500 dark:text-colorScheme-400">{occupation}</div>
+            <div className="text-colorScheme-500 dark:text-colorScheme-400">{company}</div>
+            <div className="flex space-x-3 pt-6 text-colorScheme-400">
               <SocialIcon kind="mail" href={`mailto:${email}`} />
               <SocialIcon kind="github" href={github} />
               <SocialIcon kind="linkedin" href={linkedin} />

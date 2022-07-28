@@ -29,7 +29,7 @@ const Pre = (props) => {
           className={`border-1 absolute right-2 top-2 h-8 w-8 rounded ${
             copied
               ? 'border-green-400 focus:border-green-400 focus:outline-none'
-              : 'border-indigo-300'
+              : 'border-colorScheme-300'
           }`}
           onClick={onCopy}
         >
@@ -38,7 +38,7 @@ const Pre = (props) => {
             viewBox="0 0 24 24"
             stroke="currentColor"
             fill="none"
-            className={copied ? 'text-green-500' : 'text-indigo-300'}
+            className={copied ? 'text-green-500' : 'text-colorScheme-300'}
           >
             {copied ? (
               <>
