@@ -4,6 +4,7 @@ import { PageSEO } from '@/components/SEO'
 import Lottie from 'react-lottie'
 // import animationData from '../data/animations/monkey-banana.json'
 import animationData from '../data/animations/meditating-monkey.json'
+// import animationData from '../data/animations/voya-logo-lottie.json'
 
 export default function AuthorLayout({ children, frontMatter }) {
   const { name, avatar, occupation, company, email, twitter, linkedin, github } = frontMatter
