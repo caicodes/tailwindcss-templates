@@ -10,14 +10,26 @@ canonicalUrl:
 authors: ['default']
 ---
 
-# after effects
+# Adobe After Effects to Lottie
 
-Lottie files with After Effects, amazing...
+- Lottie allows you to render an animation from a JSON structure exported from Adobe After Effects
+- The player then uses the data from the json file to essentially create an SVG file that's animated
+- Additional options such as interactivity, looping, etc. can be used
+
+### Lottie files with After Effects, amazing...
 
 So, besides some of the issues getting the extension to install properly and having no luck loading lottie files into lottiefiles.com from the extension, it did create the lottie json for download and seems to work nicely... 5 second logo animation, only 27Kb... not bad!
 
-{' '}
+MDX issues embedding a react component, using Lottie files with a player from **react-lottie** it's not working, but it could be due to this blog's mdx/next configuration.
 
 For whatever reason... this is not displaying in blog posts via mdx... so I'm gonna get it in another way.
 
-{' '}
+## Update...
+
+Got the template setup with the lottie player so I can pass that option into blog posts in frontmatter and then render the animation... I can expand that a bit, not as nice as just dropping them into the blog itself but I can add them as headers with this approach... which is the solution you see above. 😎
+
+As for the workflow, it can definitely be streamlined and other than mdx display issues, Lottie files will likely find their way into many more projects and I am just getting started with them in After Effects. I simply loaded an .ai illustrator file into After Effects, and in doing so, learned to ungroup items by layer, and then could immediately begin making tweens and previewing them with ease. I then chose Windows > Extensions > Lottie Files and my composition displays in a Lottie player much like the one on Lottie Files.
+
+Everything was pretty easy when it came to downloading the .json and I had options for the .lottie format as well. Although I could not load the file from the extension window directly into LottieFiles.com, it was pretty easy for the rest. I am sure it's a login/permissions issue but it's not important for me to have them in my files on lottie, as long as I can use AE to create the animations, then the extension to export it and a set of players for use in various projects, I'm good!
+
+Can't wait to build custom animations, branded loaders, etc... this will definitely be some animation sugar to sprinkle in the mix going forward... Love it.
