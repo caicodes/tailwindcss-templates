@@ -16,4 +16,4 @@ authors: ['default']
 
 An online experience developers love on October 25, 2022
 
-Register Here: https://nextjs.org/conf
+![nextjs-conf-ticket](/static/images/next-conf-ticket.jpeg)
