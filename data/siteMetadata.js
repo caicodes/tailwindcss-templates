@@ -14,8 +14,8 @@ const siteMetadata = {
   github: 'https://github.com/caicodes',
   twitter: 'https://twitter.com/ArtasceCreative',
   facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  youtube: 'https://www.youtube.com/channel/UCnS8ijumElXzBHIDKgoIBMg',
+  linkedin: 'https://www.linkedin.com/in/cai-toy/',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
